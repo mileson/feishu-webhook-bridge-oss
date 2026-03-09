@@ -156,26 +156,6 @@ CLAUDE_CODE_AUTH_TOKEN=your-token
 ./scripts/uninstall_launch_agent.sh
 ```
 
-## 仓库约定
-
-为了安全起见，本仓库默认不提交：
-
-- `.env`
-- 日志文件
-- 数据库文件
-- 虚拟环境目录
-- 任何密钥与 Token
-
-## 发布前建议
-
-在公开仓库前，建议再做一次自查：
-
-```bash
-rg -n "secret|token|api[_-]?key|app_secret|bearer|sk-|cr_" .
-```
-
-同时阅读：`SECURITY.md`
-
 ## 许可证
 
 本项目采用 `MIT` 许可证。
