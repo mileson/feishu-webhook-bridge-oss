@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Virtualenv
+venv/
+.venv/
+
+# Local config
+.env
+!.env.example
+
+# Runtime files
+logs/
+*.log
+*.pid
+.bot.pid
+*.db
+*.sqlite
+*.sqlite3
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Test artifacts
+test_image_upload.png

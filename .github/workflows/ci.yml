@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Python compile check
+        run: |
+          python -m py_compile \
+            config.py \
+            claude_client.py \
+            claude_local.py \
+            conversation_context.py \
+            lark_api_client.py \
+            lark_ws_client.py \
+            main.py \
+            message_handler.py
+
+      - name: Shell syntax check
+        run: |
+          bash -n start.sh
+          bash -n run_bot.sh
+          bash -n restart.sh
+          bash -n status.sh
+          bash -n scripts/install_launch_agent.sh
+          bash -n scripts/uninstall_launch_agent.sh

@@ -1,0 +1,16 @@
+# 飞书长连接 SDK
+# ⚠️ 必须使用 1.4.0 版本！1.5.x 版本存在长连接问题
+lark-oapi==1.4.0
+
+# ⚠️ 重要：Protobuf 版本限制
+# 飞书长连接只支持 protobuf 3.x 版本
+# 如果你的项目需要 protobuf 4.x，会有冲突
+protobuf>=3.19.0,<4.0.0
+
+# SOCKS 代理支持（如果系统配置了代理）
+python-socks>=2.0.0
+
+# 配置管理
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+python-dotenv>=1.0.1
