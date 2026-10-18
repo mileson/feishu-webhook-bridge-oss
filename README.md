@@ -1,4 +1,21 @@
-# 飞书长连接机器人桥接器（开源版）
+<a id="飞书长连接机器人桥接器开源版"></a>
+
+<div align="center">
+
+# 飞书机器人桥接器 · 本地 Agent 接入
+
+**把飞书消息转给本地 Codex 或 Claude Code，再将结果回复飞书。**
+
+飞书长连接 · 本地 Agent · 消息回复 · CLI 管理
+
+[![中文说明](https://img.shields.io/badge/%E8%AF%B4%E6%98%8E-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-059669)](#readme-detail-15)
+[![项目类型](https://img.shields.io/badge/%E9%A1%B9%E7%9B%AE-CLI-6366f1)](#readme-detail-15)
+
+[✨ 核心特性](#readme-detail-15) · [✅ 适合谁用](#readme-detail-17) · [🚀 本地 CLI 安装](#readme-detail-19) · [🧩 模块速查](#readme-detail-37) · [⚙️ 飞书开放平台配置](#readme-detail-21) · [📁 配置文件说明](#readme-detail-23)
+
+</div>
+
+---
 
 这是一个面向开源发布整理过的飞书机器人项目。
 
@@ -9,11 +26,13 @@
 - 把消息转给本地 `Codex` 或 `Claude Code`
 - 再把结果回复到飞书
 
-[核心特性](#readme-section-1) · [适合谁用](#readme-section-2) · [本地 CLI 安装](#readme-section-3) · [飞书开放平台配置](#readme-section-4) · [最简使用方式](#readme-section-6) · [Python 版本要求](#readme-section-8) · [仓库导航](#readme-section-12)
-
 <a id="readme-section-1"></a>
 
-## 核心特性
+<a id="核心特性"></a>
+
+<a id="readme-detail-15"></a>
+
+## ✨ 核心特性
 
 - 无需公网回调，无需内网穿透
 - 支持 `Codex`
@@ -25,17 +44,31 @@
 
 <a id="readme-section-2"></a>
 
-## 适合谁用
+<a id="适合谁用"></a>
+
+<a id="readme-detail-17"></a>
+
+## ✅ 适合谁用
 
 适合希望把本地 AI CLI 暴露到飞书中的个人开发者、小团队或内部工具维护者。
 
 <a id="readme-section-3"></a>
 
-## 本地 CLI 安装
+<a id="本地-cli-安装"></a>
+
+<a id="readme-detail-19"></a>
+
+## 🚀 本地 CLI 安装
+
+
 
 <a id="readme-section-4"></a>
 
-## 飞书开放平台配置
+<a id="飞书开放平台配置"></a>
+
+<a id="readme-detail-21"></a>
+
+## ⚙️ 飞书开放平台配置
 
 你需要在飞书开放平台中：
 
@@ -51,7 +84,11 @@
 
 <a id="readme-section-5"></a>
 
-## 配置文件说明
+<a id="配置文件说明"></a>
+
+<a id="readme-detail-23"></a>
+
+## 📁 配置文件说明
 
 最小配置如下：
 
@@ -65,7 +102,11 @@ LOCAL_AI_PROVIDER=codex
 
 <a id="readme-section-6"></a>
 
-## 最简使用方式
+<a id="最简使用方式"></a>
+
+<a id="readme-detail-25"></a>
+
+## 📖 最简使用方式
 
 你只需要准备：
 
@@ -97,7 +138,11 @@ LOCAL_AI_PROVIDER=codex
 
 <a id="readme-section-7"></a>
 
-## 常用命令
+<a id="常用命令"></a>
+
+<a id="readme-detail-27"></a>
+
+## 🔧 常用命令
 
 在飞书中可直接发送：
 
@@ -113,7 +158,11 @@ LOCAL_AI_PROVIDER=codex
 
 <a id="readme-section-8"></a>
 
-## Python 版本要求
+<a id="python-版本要求"></a>
+
+<a id="readme-detail-29"></a>
+
+## ⚙️ Python 版本要求
 
 当前推荐使用：
 
@@ -139,7 +188,11 @@ claude --version
 
 <a id="readme-section-9"></a>
 
-## Claude Code 自定义模型上游
+<a id="claude-code-自定义模型上游"></a>
+
+<a id="readme-detail-31"></a>
+
+## 📌 Claude Code 自定义模型上游
 
 如果你选择的是 `Claude Code`，还可以把它接到一个 **Anthropic Messages API 兼容网关**。
 
@@ -162,7 +215,11 @@ CLAUDE_CODE_AUTH_TOKEN=your-token
 
 <a id="readme-section-10"></a>
 
-## macOS 后台运行
+<a id="macos-后台运行"></a>
+
+<a id="readme-detail-33"></a>
+
+## 📌 macOS 后台运行
 
 如果你希望机器人长期后台运行：
 
@@ -180,22 +237,36 @@ CLAUDE_CODE_AUTH_TOKEN=your-token
 
 <a id="readme-section-11"></a>
 
-## 进一步阅读
+<a id="进一步阅读"></a>
+
+<a id="readme-detail-35"></a>
+
+## 📚 进一步阅读
 
 - [贡献指南](CONTRIBUTING.md)
 - [安全反馈](SECURITY.md)
 
 <a id="readme-section-12"></a>
 
-## 仓库导航
+<a id="仓库导航"></a>
 
-| 入口 | 内容 |
-| --- | --- |
-| [`docs/`](docs/) | 项目说明与参考文档 |
-| [`scripts/`](scripts/) | 开发与维护脚本 |
+<a id="readme-detail-37"></a>
+
+## 🧩 模块速查
+
+按要处理的工作选择入口，先看模块职责，再进入对应文件或目录。
+
+| 模块入口 | 负责什么 | 什么时候看 |
+| --- | --- | --- |
+| [`docs/`](docs/) | 项目说明与参考文档 | 查阅运行、设计与维护约定 |
+| [`scripts/`](scripts/) | 开发与维护脚本 | 查找构建、验证或维护的现有命令 |
 
 <a id="readme-section-13"></a>
 
-## 许可证
+<a id="许可证"></a>
+
+<a id="readme-detail-39"></a>
+
+## 📄 许可证
 
 本项目采用 `MIT` 许可证。
