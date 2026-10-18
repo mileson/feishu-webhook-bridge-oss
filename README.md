@@ -9,9 +9,9 @@
 - 把消息转给本地 `Codex` 或 `Claude Code`
 - 再把结果回复到飞书
 
-## 适合谁用
+[核心特性](#readme-section-1) · [适合谁用](#readme-section-2) · [本地 CLI 安装](#readme-section-3) · [飞书开放平台配置](#readme-section-4) · [最简使用方式](#readme-section-6) · [Python 版本要求](#readme-section-8) · [仓库导航](#readme-section-12)
 
-适合希望把本地 AI CLI 暴露到飞书中的个人开发者、小团队或内部工具维护者。
+<a id="readme-section-1"></a>
 
 ## 核心特性
 
@@ -22,6 +22,48 @@
 - 支持快捷命令
 - 支持图片、文件等扩展消息
 - 支持 macOS 常驻后台运行
+
+<a id="readme-section-2"></a>
+
+## 适合谁用
+
+适合希望把本地 AI CLI 暴露到飞书中的个人开发者、小团队或内部工具维护者。
+
+<a id="readme-section-3"></a>
+
+## 本地 CLI 安装
+
+<a id="readme-section-4"></a>
+
+## 飞书开放平台配置
+
+你需要在飞书开放平台中：
+
+1. 创建企业自建应用
+2. 打开权限：
+   - `im:chat`
+   - `im:message`
+   - `contact:user.base:readonly`
+3. 在事件订阅中选择：**使用长连接接收事件**
+4. 订阅事件：`im.message.receive_v1`
+
+详细步骤请看：`FEISHU_CONSOLE_SETUP.md`
+
+<a id="readme-section-5"></a>
+
+## 配置文件说明
+
+最小配置如下：
+
+```env
+FEISHU_APP_ID=cli_xxxxxxxxxxxxx
+FEISHU_APP_SECRET=xxxxxxxxxxxxxxxxxxxx
+LOCAL_AI_PROVIDER=codex
+```
+
+完整示例见：`.env.example`
+
+<a id="readme-section-6"></a>
 
 ## 最简使用方式
 
@@ -53,7 +95,23 @@
 
 输入后会自动写入 `.env`，然后启动监听。
 
-## 本地 CLI 安装
+<a id="readme-section-7"></a>
+
+## 常用命令
+
+在飞书中可直接发送：
+
+- `ggm`
+- `gpr`
+- `review`
+- `explain`
+- `test`
+- `docs`
+- `help`
+- `clear`
+- `info`
+
+<a id="readme-section-8"></a>
 
 ## Python 版本要求
 
@@ -79,31 +137,7 @@ npm install -g @anthropic-ai/claude-code
 claude --version
 ```
 
-## 飞书开放平台配置
-
-你需要在飞书开放平台中：
-
-1. 创建企业自建应用
-2. 打开权限：
-   - `im:chat`
-   - `im:message`
-   - `contact:user.base:readonly`
-3. 在事件订阅中选择：**使用长连接接收事件**
-4. 订阅事件：`im.message.receive_v1`
-
-详细步骤请看：`FEISHU_CONSOLE_SETUP.md`
-
-## 配置文件说明
-
-最小配置如下：
-
-```env
-FEISHU_APP_ID=cli_xxxxxxxxxxxxx
-FEISHU_APP_SECRET=xxxxxxxxxxxxxxxxxxxx
-LOCAL_AI_PROVIDER=codex
-```
-
-完整示例见：`.env.example`
+<a id="readme-section-9"></a>
 
 ## Claude Code 自定义模型上游
 
@@ -126,19 +160,7 @@ CLAUDE_CODE_AUTH_TOKEN=your-token
 
 更多说明见：`docs/providers.md`
 
-## 常用命令
-
-在飞书中可直接发送：
-
-- `ggm`
-- `gpr`
-- `review`
-- `explain`
-- `test`
-- `docs`
-- `help`
-- `clear`
-- `info`
+<a id="readme-section-10"></a>
 
 ## macOS 后台运行
 
@@ -155,6 +177,24 @@ CLAUDE_CODE_AUTH_TOKEN=your-token
 ```bash
 ./scripts/uninstall_launch_agent.sh
 ```
+
+<a id="readme-section-11"></a>
+
+## 进一步阅读
+
+- [贡献指南](CONTRIBUTING.md)
+- [安全反馈](SECURITY.md)
+
+<a id="readme-section-12"></a>
+
+## 仓库导航
+
+| 入口 | 内容 |
+| --- | --- |
+| [`docs/`](docs/) | 项目说明与参考文档 |
+| [`scripts/`](scripts/) | 开发与维护脚本 |
+
+<a id="readme-section-13"></a>
 
 ## 许可证
 
